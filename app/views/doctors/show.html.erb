@@ -5,8 +5,9 @@ DEPT: <h2><%= @doctor.department %></h2>
 
 Appointments: <br>
 <% @doctor.appointments.each do |appointment| %>
-  <%= appointment.appointment_datetime %><br>
+  <%= appointment.appointment_datetime.strftime("%B %d, %Y at %H:%M") %><br>
   <% end %>
 <% @doctor.patients.each do |patient| %>
   <%= link_to patient.name, patient_path %><br>
+  
 <% end %>

@@ -1,0 +1,14 @@
+<h1> Patient SHOW </h1>
+Patient: <h2><%= @patient.name %></h2>
+Doctor: <br>
+<% @patient.doctors.each do |doctor| %>
+  <%= link_to doctor.name, doctor %><br>
+  
+<% end %>
+Appointments: <%= @patient.appointments.count %><br>
+When: <% @patient.appointments.each do |appointment| %>
+  <%= appointment.appointment_datetime.strftime("%B %d, %Y at %H:%M") %><br>
+  <% end %>
+
+
+

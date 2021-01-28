@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20210127221738) do
 
   create_table "patients", force: :cascade do |t|
     t.string   "name"
-    t.string   "age"
+    t.integer  "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
